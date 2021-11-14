@@ -1,0 +1,62 @@
+{
+  "messeges": [
+    {
+      "id": "user_msg_1",
+      "imgUrl": "https://tiny.cc/telegram-photo1",
+      "status": "online",
+      "username": "Mariam",
+      "lastMsg": "Hello. please check your email",
+      "msgDate": "22:30",
+      "msgStatus": "received_read"
+    },
+    {
+      "id": "user_msg_2",
+      "imgUrl": "https://tiny.cc/telegram-photo4",
+      "status": "offline",
+      "username": "Leo",
+      "lastMsg": "Oh. That's great 😍",
+      "msgDate": "2 days ago at 1:20",
+      "msgStatus": "sent"
+    },
+    {
+      "id": "user_msg_3",
+      "imgUrl": "https://tiny.cc/telegram-photo2",
+      "status": "offline",
+      "username": "Ali",
+      "lastMsg": "Hello, Mohammad",
+      "msgDate": "3 days ago at 18:45",
+      "msgStatus": "received_unread",
+      "msgNotificationsCount": 1
+    }
+  ],
+  "groups": [
+    {
+      "id": "group_msg_1",
+      "imgUrl": "https://tiny.cc/telegram-photo6",
+      "title": "Python Lovers",
+      "lastMsg": "Noted!!",
+      "msgDate": "13:30",
+      "msgStatus": "sent_read"
+    },
+    {
+      "id": "group_msg_2",
+      "imgUrl": "https://tiny.cc/telegram-photo7",
+      "title": "React Native",
+      "lastMsg": "Hazem: Thank you",
+      "msgDate": "22:30",
+      "msgStatus": "received_unread",
+      "msgNotificationsCount": 1
+    }
+  ],
+  "channels": [
+    {
+      "id": "channel_msg_1",
+      "imgUrl": "https://tiny.cc/telegram-photo8",
+      "title": "BBC News",
+      "lastMsg": "Colombia's most wanted drug lord Otoniel captured",
+      "msgDate": "22:30",
+      "msgStatus": "received_unread",
+      "msgNotificationsCount": 4
+    }
+  ]
+}

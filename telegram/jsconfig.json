@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["telegram/*"],
+      "@router-components": ["telegram/router/components"],
+      "@home-components": ["telegram/views/home/components"],
+      "@home-pages-components": [
+        "telegram/views/home/components/content/pages/components"
+      ],
+      "@chat-components": ["telegram/views/chat/components"]
+    }
+  }
+}
