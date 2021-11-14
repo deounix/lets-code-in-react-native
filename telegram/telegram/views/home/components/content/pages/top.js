@@ -22,7 +22,7 @@ import {hp} from "@/utils";
 // styles
 import {topStyles as styles} from "./styles";
 
-const ChatUI = ({title, data, setTab}) => {
+const ChatUI = ({navigation, title, data, setTab}) => {
   const theme = useTheme();
 
   return (
@@ -38,7 +38,22 @@ const ChatUI = ({title, data, setTab}) => {
       </Text>
 
       {data.map((item, index) => (
-        <ChatComponent key={index} {...item} />
+        <ChatComponent
+          key={index}
+          {...item}
+          onClick={() => {
+            if (title === "messeges") {
+              navigation.navigate("chat", {
+                user_data: {
+                  id: item.user_id,
+                  username: item.username,
+                  imgUrl: item.imgUrl,
+                  status: item.status,
+                },
+              });
+            }
+          }}
+        />
       ))}
 
       <TouchableOpacity
@@ -66,7 +81,7 @@ const ChatUI = ({title, data, setTab}) => {
   );
 };
 
-const Top = ({tabs}) => {
+const Top = ({tabs, navigation}) => {
   const {messeges, groups, channels} = HomeData;
 
   // NO NEED FOR (RECYCLE LIST - FLAT LIST) AS THIS ITEMS SHOULD BE LIMITED TO MAXIMUM 3 PER SECTION !!
@@ -77,6 +92,7 @@ const Top = ({tabs}) => {
       showsVerticalScrollIndicator={false}>
       {/* Messeges Tab >> tab_index is (1) */}
       <ChatUI
+        navigation={navigation}
         title="messeges"
         data={messeges.slice(0, 3)}
         setTab={() => tabs.setTab(1)}
@@ -84,6 +100,7 @@ const Top = ({tabs}) => {
 
       {/* Groups Tab >> tab_index is (2) */}
       <ChatUI
+        navigation={navigation}
         title="groups"
         data={groups.slice(0, 3)}
         setTab={() => tabs.setTab(2)}
@@ -91,6 +108,7 @@ const Top = ({tabs}) => {
 
       {/* Channels Tab >> tab_index is (3) */}
       <ChatUI
+        navigation={navigation}
         title="channels"
         data={channels.slice(0, 3)}
         setTab={() => tabs.setTab(3)}

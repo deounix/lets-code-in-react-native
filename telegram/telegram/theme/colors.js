@@ -9,6 +9,7 @@ const default_theme = {
   online: "#4dba66",
   offline: "#d4d3d2",
   green: "#50925e",
+  dark: "#030b1b",
 };
 
 const themes = {
@@ -19,6 +20,7 @@ const themes = {
     rgbaBackgroundColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
     whiteOrDark: "#030b1b",
     grey: "#757575",
+    msgContentBackgroundColor: "#f3f4f9",
     ...default_theme,
   },
   dark: {
@@ -28,6 +30,7 @@ const themes = {
     rgbaBackgroundColor: (opacity = 1) => `rgba(3, 11, 27, ${opacity})`,
     whiteOrDark: "#ffffff",
     grey: "#757575",
+    msgContentBackgroundColor: "#f7f8fd",
     ...default_theme,
   },
 };

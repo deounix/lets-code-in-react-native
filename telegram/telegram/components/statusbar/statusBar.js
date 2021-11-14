@@ -1,35 +1,19 @@
 import React, {useEffect} from "react";
 
-import {StatusBar, Platform} from "react-native";
-
-import SystemNavigationBar from "react-native-system-navigation-bar";
+import {StatusBar} from "react-native";
 
 // utils
 import PropTypes from "prop-types";
+import {changeStatusBar} from "@/utils";
 
 // theme
-import {withTheme, themes, default_theme} from "@/theme";
+import {withTheme, themes} from "@/theme";
 
 const StatusBarComponent = ({theme, customColor = null, ...props}) => {
   // listen for theme change (set system navigation color as dark or light)
   useEffect(() => {
-    if (Platform.OS === "android") {
-      SystemNavigationBar.setNavigationColor(
-        customColor || default_theme.primary,
-        customColor ? false : true,
-      );
-
-      setTimeout(() => {
-        StatusBar.setBarStyle(
-          theme.name === "light" ? "dark-content" : "light-content",
-        );
-      }, 200);
-    } else {
-      StatusBar.setBarStyle(
-        theme.name === "light" ? "dark-content" : "light-content",
-      );
-    }
-  }, [theme]);
+    changeStatusBar({theme, customColor});
+  }, [theme, customColor]);
 
   return (
     <StatusBar

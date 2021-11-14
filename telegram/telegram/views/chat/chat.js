@@ -18,7 +18,9 @@ import {withTheme, themes} from "@/theme";
 // styles
 import styles from "./styles";
 
-const Chat = ({navigation, theme}) => {
+const Chat = ({route, navigation, theme}) => {
+  const {user_data} = route.params;
+
   return (
     <>
       <StatusBarComponent
@@ -32,12 +34,12 @@ const Chat = ({navigation, theme}) => {
         ]}>
         <HeaderComponent
           navigation={navigation}
-          imgUrl="https://tiny.cc/telegram-photo1"
-          title="Mariam"
-          last_seen="online"
+          imgUrl={user_data.imgUrl}
+          title={user_data.username}
+          last_seen={user_data.status}
         />
 
-        <ChatListComponent />
+        <ChatListComponent user_id={user_data.id} />
 
         <ChatBoxComponent />
       </View>

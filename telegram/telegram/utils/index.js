@@ -1,8 +1,3 @@
 export {wp, hp} from "./responsive";
-export {
-  width,
-  height,
-  isRTL,
-  isIos,
-  isAndroid,
-} from "./helper";
+export * from "./helper";
+export {default as changeStatusBar} from "./statusbar";

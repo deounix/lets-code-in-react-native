@@ -35,7 +35,7 @@ const ChatBoxComponent = ({theme}) => {
       <View style={styles.middleSide}>
         <TextInput
           style={[styles.input, {color: themes[theme.name].whiteOrDark}]}
-          placeholder="Message"
+          placeholder="type your message ..."
           underlineColorAndroid="transparent"
           multiline={true}
           onFocus={() => {}}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "user_1",
+    "isOnline": true,
+    "messages": [
+      {
+        "id": 1,
+        "type": "RECIEVE",
+        "text": "Hi Mohammad",
+        "time": "11:18 am",
+        "messageType": "TEXT"
+      },
+      {
+        "id": 2,
+        "type": "SEND",
+        "text": "Hi, Who's this?",
+        "time": "11:24 am",
+        "messageType": "TEXT"
+      },
+      {
+        "id": 3,
+        "type": "RECIEVE",
+        "text": "Mariam 😃",
+        "time": "1:20 pm",
+        "messageType": "TEXT"
+      },
+      {
+        "id": 4,
+        "type": "SEND",
+        "text": "ohh!! long time",
+        "time": "1:21 pm",
+        "messageType": "TEXT"
+      },
+      {
+        "id": 5,
+        "type": "SEND",
+        "text": "Hello my Image",
+        "time": "1:28 pm",
+        "messageType": "GALLERY",
+        "uri": "https://tiny.cc/women2"
+      }
+    ]
+  }
+]

@@ -8,3 +8,5 @@ export const isIos = Platform.OS === "ios";
 
 export const isAndroid = Platform.OS === "android";
 
+export const findByUserID = (data, user_id) =>
+  data.find(item => item.id === user_id);

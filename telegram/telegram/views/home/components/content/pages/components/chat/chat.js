@@ -1,6 +1,6 @@
 import React from "react";
 
-import {View, Image, Text} from "react-native";
+import {TouchableOpacity, View, Image, Text} from "react-native";
 
 // theme
 import {withTheme, themes} from "@/theme";
@@ -21,17 +21,17 @@ const Chat = ({
   msgDate,
   msgStatus,
   msgNotificationsCount = 0,
-  containerStyle = {},
+  onClick,
 }) => {
   return (
-    <View
+    <TouchableOpacity
       style={[
         styles.container,
         {
           backgroundColor: themes[theme.name].lightBackgroundColor,
-          ...containerStyle,
         },
-      ]}>
+      ]}
+      onPress={onClick}>
       <View style={styles.imgContainer}>
         <Image style={styles.img} source={{uri: imgUrl}} />
 
@@ -105,7 +105,7 @@ const Chat = ({
           </View>
         )}
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -8,13 +8,10 @@ import {ChatComponent} from "@home-pages-components";
 // json Data
 import {HomeData} from "@/assets/json";
 
-// utils
-import {hp} from "@/utils";
-
 // styles
 import {messegesStyles as styles} from "./styles";
 
-const Messeges = () => {
+const Messeges = ({navigation}) => {
   const {messeges} = HomeData;
 
   return (
@@ -24,7 +21,19 @@ const Messeges = () => {
       data={messeges}
       keyExtractor={item => item.id}
       renderItem={({item}) => (
-        <ChatComponent {...item} containerStyle={{marginBottom: hp(3.7)}} />
+        <ChatComponent
+          {...item}
+          onClick={() =>
+            navigation.navigate("chat", {
+              user_data: {
+                id: item.user_id,
+                username: item.username,
+                imgUrl: item.imgUrl,
+                status: item.status,
+              },
+            })
+          }
+        />
       )}
       showsVerticalScrollIndicator={false}
     />
