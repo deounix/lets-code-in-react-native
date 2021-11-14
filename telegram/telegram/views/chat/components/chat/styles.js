@@ -4,16 +4,15 @@ import {StyleSheet} from "react-native";
 import {default_theme, Fonts, FontsSize} from "@/theme";
 
 // utils
-import {hp, wp, width} from "@/utils";
+import {hp, wp} from "@/utils";
 
 const styles = StyleSheet.create({
   container: {
-    height: hp(6),
+    borderBottomLeftRadius: hp(4),
+    borderBottomRightRadius: hp(4),
   },
   content: {
     flexGrow: 1,
-    borderBottomLeftRadius: hp(6),
-    borderBottomRightRadius: hp(6),
     paddingHorizontal: wp(3),
     paddingVertical: hp(2),
   },
@@ -67,12 +66,14 @@ const styles = StyleSheet.create({
   msgContainer: {
     flexDirection: "row-reverse",
     minWidth: wp(50),
+    paddingBottom: hp(1),
   },
   msgContent: {
     paddingVertical: hp(1.5),
-    paddingHorizontal: wp(4),
+    paddingHorizontal: wp(5),
     borderTopLeftRadius: hp(5),
     borderTopRightRadius: hp(5),
+    maxWidth: wp(85),
   },
   sendMsgContent: {
     backgroundColor: default_theme.primary,
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
   msgText: {
     color: default_theme.white,
     fontFamily: Fonts.Regular,
-    fontSize: FontsSize.small,
+    fontSize: FontsSize.tiny,
   },
   msgTimeContainer: {
     flexDirection: "row-reverse",
@@ -92,7 +93,13 @@ const styles = StyleSheet.create({
   msgTime: {
     paddingTop: hp(1),
     fontFamily: Fonts.Regular,
-    fontSize: FontsSize.tiny,
+    fontSize: FontsSize.nano,
+  },
+  galleryImage: {
+    borderTopLeftRadius: hp(5),
+    borderTopRightRadius: hp(5),
+    width: wp(60),
+    height: wp(60),
   },
 });
 

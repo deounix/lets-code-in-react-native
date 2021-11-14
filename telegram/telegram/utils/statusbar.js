@@ -20,7 +20,7 @@ const changeStatusBar = ({
       StatusBar.setBarStyle(
         theme.name === "light" ? "dark-content" : "light-content",
       );
-    }, 200);
+    }, 300);
   } else {
     StatusBar.setBarStyle(
       theme.name === "light" ? "dark-content" : "light-content",

@@ -19,4 +19,5 @@ export const FontsSize = {
   medium: hp(2),
   small: hp(1.8),
   tiny: hp(1.5),
+  nano: hp(1.2),
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-import {FlatList, View, Text} from "react-native";
+import {FlatList, View, Text, Image} from "react-native";
 
 // theme
 import {withTheme, themes, default_theme} from "@/theme";
@@ -9,7 +9,7 @@ import {withTheme, themes, default_theme} from "@/theme";
 import {MessegesData} from "@/assets/json";
 
 // utils
-import {hp, findByUserID} from "@/utils";
+import {hp, findByUserID, wp} from "@/utils";
 
 // styles
 import styles from "./styles";
@@ -17,7 +17,7 @@ import styles from "./styles";
 const ChatList = ({theme, user_id}) => {
   const msgs = findByUserID(MessegesData, user_id);
 
-  const MsgView = ({type, text, time}) => {
+  const MsgView = ({messageType, type, text, time, uri}) => {
     return (
       <View
         style={[
@@ -30,6 +30,10 @@ const ChatList = ({theme, user_id}) => {
           <View
             style={[
               styles.msgContent,
+              messageType === "GALLERY" && {
+                paddingHorizontal: 0,
+                paddingTop: 0,
+              },
               type === "RECIEVE"
                 ? {
                     ...styles.recieveMsgContent,
@@ -40,15 +44,26 @@ const ChatList = ({theme, user_id}) => {
                     ...styles.sendMsgContent,
                   },
             ]}>
+            {/* Gallery Image */}
+            {messageType === "GALLERY" && (
+              <Image style={styles.galleryImage} source={{uri}} />
+            )}
+
+            {/* TEXT */}
             <Text
               style={[
                 styles.msgText,
+                messageType === "GALLERY" && {
+                  paddingVertical: hp(1),
+                  paddingHorizontal: wp(2),
+                },
                 type === "RECIEVE" && {color: default_theme.dark},
               ]}>
               {text}
             </Text>
           </View>
 
+          {/* Time Container */}
           <View
             style={[
               styles.msgTimeContainer,
@@ -76,21 +91,20 @@ const ChatList = ({theme, user_id}) => {
 
   return (
     <FlatList
-      style={styles.container}
-      contentContainerStyle={[
-        styles.content,
+      style={[
+        styles.container,
         {backgroundColor: themes[theme.name].rgbaBackgroundColor(0.8)},
       ]}
+      contentContainerStyle={styles.content}
       data={msgs ? msgs.messages : []}
       keyExtractor={item => item.id}
       renderItem={({item}) => {
-        if (item.messageType === "TEXT") {
+        if (item.messageType === "TEXT" || item.messageType === "GALLERY") {
           return <MsgView {...item} />;
         }
 
         return null;
       }}
-      showsVerticalScrollIndicator={false}
     />
   );
 };

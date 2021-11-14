@@ -6,7 +6,7 @@
       {
         "id": 1,
         "type": "RECIEVE",
-        "text": "Hi Mohammad",
+        "text": "Hello Mohammad",
         "time": "11:18 am",
         "messageType": "TEXT"
       },
@@ -21,21 +21,21 @@
         "id": 3,
         "type": "RECIEVE",
         "text": "Mariam 😃",
-        "time": "1:20 pm",
+        "time": "11:24 am",
         "messageType": "TEXT"
       },
       {
         "id": 4,
         "type": "SEND",
-        "text": "ohh!! long time",
-        "time": "1:21 pm",
+        "text": "Excuse me can you be more specific cuz I know at least 5 girls with that name 🤔",
+        "time": "11:25 am",
         "messageType": "TEXT"
       },
       {
         "id": 5,
-        "type": "SEND",
-        "text": "Hello my Image",
-        "time": "1:28 pm",
+        "type": "RECIEVE",
+        "text": "That Mariam",
+        "time": "11:27 am",
         "messageType": "GALLERY",
         "uri": "https://tiny.cc/women2"
       }
