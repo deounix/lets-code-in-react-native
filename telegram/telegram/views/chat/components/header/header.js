@@ -14,6 +14,7 @@ import {IconComponent, IconMoonComponent} from "@/components";
 import {withTheme, themes} from "@/theme";
 
 // utils
+import PropTypes from "prop-types";
 import {hp} from "@/utils";
 
 // styles
@@ -111,6 +112,15 @@ const Header = ({navigation, theme, imgUrl, title, last_seen}) => {
       </View>
     </View>
   );
+};
+
+// Header Types
+Header.propTypes = {
+  navigation: PropTypes.object,
+  theme: PropTypes.object,
+  imgUrl: PropTypes.string,
+  title: PropTypes.string,
+  last_seen: PropTypes.oneOf(["online", "offline"]),
 };
 
 export default withTheme(Header);

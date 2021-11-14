@@ -17,6 +17,7 @@ import {useTheme, themes} from "@/theme";
 import {HomeData} from "@/assets/json";
 
 // utils
+import PropTypes from "prop-types";
 import {hp} from "@/utils";
 
 // styles
@@ -81,6 +82,14 @@ const ChatUI = ({navigation, title, data, setTab}) => {
   );
 };
 
+// ChatUI props Types
+ChatUI.propTypes = {
+  navigation: PropTypes.object,
+  title: PropTypes.string,
+  data: PropTypes.array,
+  setTab: PropTypes.func,
+};
+
 const Top = ({tabs, navigation}) => {
   const {messeges, groups, channels} = HomeData;
 
@@ -115,6 +124,12 @@ const Top = ({tabs, navigation}) => {
       />
     </ScrollView>
   );
+};
+
+// Top props Types
+Top.propTypes = {
+  tabs: PropTypes.object,
+  navigation: PropTypes.object,
 };
 
 export default withTabs(Top);

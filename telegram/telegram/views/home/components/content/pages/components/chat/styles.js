@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    height: hp(10),
+    height: hp(8),
     minHeight: 75,
     borderRadius: hp(2.5),
     padding: wp(2.5),
@@ -21,9 +21,9 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   img: {
-    width: wp(18),
+    width: wp(14),
     height: "100%",
-    borderRadius: hp(2.8),
+    borderRadius: hp(1.8),
   },
   statusContainer: {
     position: "absolute",
@@ -33,9 +33,9 @@ const styles = StyleSheet.create({
     borderRadius: 30,
   },
   status: {
-    width: 15,
-    height: 15,
-    borderRadius: 30,
+    width: 12,
+    height: 12,
+    borderRadius: 24,
   },
   content: {
     flex: 1,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   username: {
     fontFamily: Fonts.Regular,
-    fontSize: FontsSize.medium,
+    fontSize: FontsSize.small,
   },
   lastMsg: {
     fontFamily: Fonts.Regular,
@@ -60,14 +60,14 @@ const styles = StyleSheet.create({
   },
   msgDate: {
     fontFamily: Fonts.Regular,
-    fontSize: FontsSize.tiny,
+    fontSize: FontsSize.nano,
   },
   notificationsCountContainer: {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    width: 27,
-    height: 20,
+    width: 20,
+    height: 18,
     borderRadius: 50,
     backgroundColor: default_theme.primary,
     marginTop: 2,
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   notificationsCount: {
     color: default_theme.white,
     fontFamily: Fonts.Regular,
-    fontSize: FontsSize.tiny,
+    fontSize: FontsSize.nano,
     textAlign: "center",
   },
 });

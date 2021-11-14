@@ -12,6 +12,9 @@ import {
   ChatBoxComponent,
 } from "@chat-components";
 
+// utils
+import PropTypes from "prop-types";
+
 // theme
 import {withTheme, themes} from "@/theme";
 
@@ -45,6 +48,13 @@ const Chat = ({route, navigation, theme}) => {
       </View>
     </>
   );
+};
+
+// Chat Types
+Chat.propTypes = {
+  route: PropTypes.object,
+  navigation: PropTypes.object,
+  theme: PropTypes.object,
 };
 
 export default withTheme(Chat);

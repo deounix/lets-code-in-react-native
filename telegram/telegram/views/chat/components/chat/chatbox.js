@@ -7,11 +7,12 @@ import {Voice2 as Voice2Icon, Send as SendIcon} from "react-native-iconly";
 // components
 import {IconComponent, IconMoonComponent} from "@/components";
 
+// utils
+import PropTypes from "prop-types";
+import {hp} from "@/utils";
+
 // theme
 import {withTheme, themes} from "@/theme";
-
-// utils
-import {hp} from "@/utils";
 
 // styles
 import styles from "./styles";
@@ -85,6 +86,11 @@ const ChatBoxComponent = ({theme}) => {
       </View>
     </View>
   );
+};
+
+// ChatBoxComponent Types
+ChatBoxComponent.propTypes = {
+  theme: PropTypes.object,
 };
 
 export default withTheme(ChatBoxComponent);

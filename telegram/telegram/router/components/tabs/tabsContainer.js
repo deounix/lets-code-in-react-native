@@ -4,6 +4,9 @@ import {View, Text, TouchableOpacity} from "react-native";
 
 import {SafeAreaView} from "react-native-safe-area-context";
 
+// utils
+import PropTypes from "prop-types";
+
 // theme
 import {default_theme} from "@/theme";
 
@@ -70,6 +73,13 @@ const TabsContainer = ({state, descriptors, navigation}) => {
       </View>
     </SafeAreaView>
   );
+};
+
+// Types
+TabsContainer.propTypes = {
+  state: PropTypes.object,
+  descriptors: PropTypes.object,
+  navigation: PropTypes.object,
 };
 
 export default TabsContainer;

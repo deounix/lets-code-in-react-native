@@ -8,6 +8,9 @@ import {ChatComponent} from "@home-pages-components";
 // json Data
 import {HomeData} from "@/assets/json";
 
+// utils
+import PropTypes from "prop-types";
+
 // styles
 import {messegesStyles as styles} from "./styles";
 
@@ -38,6 +41,11 @@ const Messeges = ({navigation}) => {
       showsVerticalScrollIndicator={false}
     />
   );
+};
+
+// Messeges props Types
+Messeges.propTypes = {
+  navigation: PropTypes.object,
 };
 
 export default Messeges;

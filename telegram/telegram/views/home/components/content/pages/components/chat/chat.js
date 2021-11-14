@@ -8,6 +8,9 @@ import {withTheme, themes} from "@/theme";
 // components
 import {IconMoonComponent} from "@/components";
 
+// utils
+import PropTypes from "prop-types";
+
 // styles
 import styles from "./styles";
 
@@ -107,6 +110,20 @@ const Chat = ({
       </View>
     </TouchableOpacity>
   );
+};
+
+// Chat props Types
+Chat.propTypes = {
+  theme: PropTypes.object,
+  imgUrl: PropTypes.string,
+  status: PropTypes.oneOf(["online", "offline"]),
+  title: PropTypes.string,
+  username: PropTypes.string,
+  lastMsg: PropTypes.string,
+  msgDate: PropTypes.string,
+  msgStatus: PropTypes.string,
+  msgNotificationsCount: PropTypes.number,
+  onClick: PropTypes.func,
 };
 
 export default withTheme(Chat);

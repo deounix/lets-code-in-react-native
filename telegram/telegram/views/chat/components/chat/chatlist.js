@@ -9,6 +9,7 @@ import {withTheme, themes, default_theme} from "@/theme";
 import {MessegesData} from "@/assets/json";
 
 // utils
+import PropTypes from "prop-types";
 import {hp, findByUserID, wp} from "@/utils";
 
 // styles
@@ -107,6 +108,12 @@ const ChatList = ({theme, user_id}) => {
       }}
     />
   );
+};
+
+// ChatList Types
+ChatList.propTypes = {
+  theme: PropTypes.object,
+  user_id: PropTypes.string,
 };
 
 export default withTheme(ChatList);

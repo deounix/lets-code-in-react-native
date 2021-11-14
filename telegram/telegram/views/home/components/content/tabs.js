@@ -2,6 +2,9 @@ import React from "react";
 
 import {View, TouchableOpacity, Text} from "react-native";
 
+// utils
+import PropTypes from "prop-types";
+
 // theme
 import {default_theme, themes} from "@/theme";
 
@@ -33,6 +36,14 @@ const Tabs = ({theme, pages, active, setPage}) => {
       })}
     </View>
   );
+};
+
+// Tabs Types
+Tabs.propTypes = {
+  theme: PropTypes.object,
+  pages: PropTypes.array,
+  active: PropTypes.number,
+  setPage: PropTypes.func,
 };
 
 export default Tabs;

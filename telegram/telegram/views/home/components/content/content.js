@@ -11,6 +11,9 @@ import {TabsProvider} from "@home-components";
 import Tabs from "./tabs";
 import {TopPage, MessegesPage, GroupsPage, ChannelsPage} from "./pages";
 
+// utils
+import PropTypes from "prop-types";
+
 // styles
 import styles from "./styles";
 
@@ -59,6 +62,12 @@ const ContentComponent = ({navigation, theme}) => {
       </PagerView>
     </TabsProvider>
   );
+};
+
+// ContentComponent Types
+ContentComponent.propTypes = {
+  navigation: PropTypes.object,
+  theme: PropTypes.object,
 };
 
 export default ContentComponent;

@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
     minWidth: wp(50),
     paddingBottom: hp(1),
+    overflow: "hidden",
   },
   msgContent: {
     paddingVertical: hp(1.5),

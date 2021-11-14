@@ -11,6 +11,7 @@ import {StatusBarComponent} from "@/components";
 import {HeaderComponent, ContentComponent} from "@home-components";
 
 // utils
+import PropTypes from "prop-types";
 import {changeStatusBar} from "@/utils";
 
 // theme
@@ -21,9 +22,11 @@ import styles from "./styles";
 
 const Home = ({navigation, theme}) => {
   // set & reset status bar >>> (important when user goBack from other pages)
-  useFocusEffect(useCallback(() => {
-    changeStatusBar({theme});
-  }, []));
+  useFocusEffect(
+    useCallback(() => {
+      changeStatusBar({theme});
+    }, []),
+  );
 
   return (
     <>
@@ -40,6 +43,12 @@ const Home = ({navigation, theme}) => {
       </View>
     </>
   );
+};
+
+// Home Types
+Home.propTypes = {
+  navigation: PropTypes.object,
+  theme: PropTypes.object,
 };
 
 export default withTheme(Home);

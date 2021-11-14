@@ -19,6 +19,7 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import {IconComponent} from "@/components";
 
 // utils
+import PropTypes from "prop-types";
 import {hp, width} from "@/utils";
 
 // theme
@@ -27,7 +28,7 @@ import {withTheme, themes} from "@/theme";
 // styles
 import styles from "./styles";
 
-const HeaderComponent = ({theme, ...props}) => {
+const HeaderComponent = ({theme}) => {
   const [volume, setVolume] = useState(true);
 
   const [isPlusClicked, setIsPlusClicked] = useState(false);
@@ -228,6 +229,11 @@ const HeaderComponent = ({theme, ...props}) => {
       </View>
     </SafeAreaView>
   );
+};
+
+// HeaderComponent Types
+HeaderComponent.propTypes = {
+  theme: PropTypes.object,
 };
 
 export default withTheme(HeaderComponent);

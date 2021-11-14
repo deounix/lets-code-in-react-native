@@ -25,7 +25,7 @@ const StatusBarComponent = ({theme, customColor = null, ...props}) => {
   );
 };
 
-// Types
+// StatusBarComponent Types
 StatusBarComponent.propTypes = {
   theme: PropTypes.shape({
     name: PropTypes.oneOf(["dark", "light"]),

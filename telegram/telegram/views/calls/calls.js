@@ -6,6 +6,9 @@ import {SafeAreaView} from "react-native-safe-area-context";
 // components
 import {StatusBarComponent} from "@/components";
 
+// utils
+import PropTypes from "prop-types";
+
 // theme
 import {withTheme, themes} from "@/theme";
 
@@ -24,6 +27,12 @@ const Calls = ({navigation, theme}) => {
         ]}></View>
     </>
   );
+};
+
+// Calls Types
+Calls.propTypes = {
+  navigation: PropTypes.object,
+  theme: PropTypes.object,
 };
 
 export default withTheme(Calls);

@@ -15,7 +15,7 @@ const topStyles = StyleSheet.create({
   },
   title: {
     fontFamily: Fonts.Regular,
-    fontSize: FontsSize.xmedium,
+    fontSize: FontsSize.small,
     paddingBottom: hp(2),
     textTransform: "capitalize",
   },
@@ -27,7 +27,7 @@ const topStyles = StyleSheet.create({
   },
   previousTitle: {
     fontFamily: Fonts.Medium,
-    fontSize: FontsSize.tiny,
+    fontSize: FontsSize.nano,
     textTransform: "capitalize",
   },
   previousIcon: {

@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
   },
   notificationContainer: {
     position: "absolute",
-    top: hp(-0.4),
-    left: wp(6.2),
+    top: hp(-0.2),
+    left: wp(7.2),
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
@@ -40,11 +40,11 @@ const styles = StyleSheet.create({
   notificationText: {
     color: default_theme.white,
     fontFamily: Fonts.ExtraLight,
-    fontSize: FontsSize.tiny,
+    fontSize: FontsSize.nano,
   },
   dotNotification: {
     position: "absolute",
-    top: hp(0.4),
+    top: hp(0.8),
     right: wp(8.4),
     backgroundColor: default_theme.purple(0.8),
     width: 10,

@@ -38,7 +38,7 @@ const BottomTabs = () => {
               set={active ? "bold" : "curved"}
               primaryColor={color}
               stroke="regular"
-              size={hp(3)}
+              size={hp(2.7)}
             />
           ),
         }}
@@ -54,7 +54,7 @@ const BottomTabs = () => {
               set={active ? "bold" : "curved"}
               primaryColor={color}
               stroke="regular"
-              size={hp(3)}
+              size={hp(2.7)}
             />
           ),
         }}
@@ -70,7 +70,7 @@ const BottomTabs = () => {
               set={active ? "bold" : "curved"}
               primaryColor={color}
               stroke="regular"
-              size={hp(3)}
+              size={hp(2.7)}
             />
           ),
         }}
@@ -86,7 +86,7 @@ const BottomTabs = () => {
               set={active ? "bold" : "curved"}
               primaryColor={color}
               stroke="regular"
-              size={hp(3)}
+              size={hp(2.7)}
             />
           ),
         }}
