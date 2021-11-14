@@ -97,9 +97,9 @@ const BottomTabs = () => {
 
 const defaultOptions = {
   headerShown: false,
-  stackAnimation: "fade",
+  animation: "fade",
   direction: "ltr",
-  stackPresentation: "containedTransparentModal",
+  presentation: "containedTransparentModal",
 };
 
 // Root Stack Navigator
