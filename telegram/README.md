@@ -16,3 +16,7 @@
 
 - [React Native](https://reactnative.dev/)
 
+### Inspired By
+
+- [Telegram Messenger Redesign (The Dark Version)](https://dribbble.com/shots/14297552-Telegram-Messenger-Design)
+- [Telegram Messenger Redesign (The Light Version)](https://dribbble.com/shots/14327121-Telegram-Messenger-Redesign)
